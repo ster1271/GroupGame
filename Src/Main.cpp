@@ -163,6 +163,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				//}//SCENE_ID_FIN_PLAYの終わりの括弧
 				//break;
 
+				//クリアシーン(高松)
 				case SCENE_ID_INIT_CLEAR:
 				{
 					//クリア画面初期化
