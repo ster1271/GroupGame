@@ -4,11 +4,15 @@
 #include "Common.h"
 #include "Scene/Scene.h"
 #include "Scene/SceneTitle.h"
+<<<<<<< Updated upstream
 #include "Scene/SceneClear.h"
+=======
+#include "Scene/SceneGameOver.h"
+>>>>>>> Stashed changes
 
 // define
-#define	SCREEN_SIZE_X	640	// X方向の画面サイズを指定
-#define	SCREEN_SIZE_Y	480	// Y方向の画面サイズを指定
+#define	SCREEN_SIZE_X	1280	// X方向の画面サイズを指定
+#define	SCREEN_SIZE_Y	720	// Y方向の画面サイズを指定
 
 //フレームレート情報
 struct FrameRateInfo
@@ -36,7 +40,7 @@ int g_CurrentSceneID = SCENE_ID_INIT_TITLE;
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	//ウィンドウの状態を設定する
-	ChangeWindowMode(true);
+	ChangeWindowMode(false);
 
 	//DXライブラリの初期化
 	if (DxLib_Init() == -1) {
@@ -191,32 +195,32 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				}//SCENE_ID_FIN_CLEARの終わりの括弧
 				break;
 
-				//case SCENE_ID_INIT_GAMEOVER:
-				//{
-				//	//ゲームオーバー画面初期化
-				//	InitGameOver();
+				case SCENE_ID_INIT_GAMEOVER:
+				{
+					//ゲームオーバー画面初期化
+					InitGameOver();
 
-				//}//SCENE_ID_INIT_GAMEOVERの終わりの括弧
-				//break;
+				}//SCENE_ID_INIT_GAMEOVERの終わりの括弧
+				break;
 
-				//case SCENE_ID_LOOP_GAMEOVER:
-				//{
-				//	//ゲームオーバー画面通常処理
-				//	StepGameOver();
+				case SCENE_ID_LOOP_GAMEOVER:
+				{
+					//ゲームオーバー画面通常処理
+					StepGameOver();
 
-				//	//ゲームオーバー画面描画処理
-				//	DrawGameOver();
+					//ゲームオーバー画面描画処理
+					DrawGameOver();
 
-				//}//SCENE_ID_LOOP_GAMEOVERの終わりの括弧
-				//break;
+				}//SCENE_ID_LOOP_GAMEOVERの終わりの括弧
+				break;
 
-				//case SCENE_ID_FIN_GAMEOVER:
-				//{
-				//	//ゲームオーバー画面後処理
-				//	FinGameOver();
+				case SCENE_ID_FIN_GAMEOVER:
+				{
+					//ゲームオーバー画面後処理
+					FinGameOver();
 
-				//}//SCENE_ID_FIN_GAMEOVERの終わりの括弧
-				//break;
+				}//SCENE_ID_FIN_GAMEOVERの終わりの括弧
+				break;
 
 			}//シーン振り分けのswitch文の終わりの括弧
 
