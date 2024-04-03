@@ -1,7 +1,6 @@
 #include "DxLib.h"
 #include "SceneClear.h"
 #include "Scene.h"
-#include "../Input/Input.h"
 
 //タイトルハンドル
 int clear_buckGround_image_handle;
@@ -20,6 +19,8 @@ void InitClear()
 //クリア通常処理
 void StepClear()
 {
+
+
 	//エンターキーでクリア後処理に移動
 	if (IsKeyRelease(KEY_INPUT_RETURN))
 	{
