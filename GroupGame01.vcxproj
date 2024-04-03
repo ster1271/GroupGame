@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Collision\Collision.cpp" />
+    <ClCompile Include="Src\Effect\Effect.cpp" />
     <ClCompile Include="Src\Input\Input.cpp" />
     <ClCompile Include="Src\Main.cpp" />
     <ClCompile Include="Src\Scene\SceneTitle.cpp" />
@@ -27,6 +28,7 @@
   <ItemGroup>
     <ClInclude Include="Src\Collision\Collision.h" />
     <ClInclude Include="Src\Common.h" />
+    <ClInclude Include="Src\Effect\Effect.h" />
     <ClInclude Include="Src\Input\Input.h" />
     <ClInclude Include="Src\Scene\Scene.h" />
     <ClInclude Include="Src\Scene\SceneTitle.h" />
