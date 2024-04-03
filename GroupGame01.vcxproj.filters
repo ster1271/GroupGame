@@ -16,10 +16,45 @@
     <Filter Include="ソース ファイル\Src">
       <UniqueIdentifier>{91b2e56f-dd2d-4207-8071-464779d9f6de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ソース ファイル\Src\Scene">
+      <UniqueIdentifier>{d4c0b684-c329-438f-9e90-104cc328b3d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Input">
+      <UniqueIdentifier>{d4c36496-fdb3-4eb9-8f65-922d91e749a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Src\Collision">
+      <UniqueIdentifier>{c8fa48fc-8192-4cf8-bf4f-37ac79c15e58}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Main.cpp">
       <Filter>ソース ファイル\Src</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Input\Input.cpp">
+      <Filter>ソース ファイル\Src\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\SceneTitle.cpp">
+      <Filter>ソース ファイル\Src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Collision\Collision.cpp">
+      <Filter>ソース ファイル\Src\Collision</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Common.h">
+      <Filter>ソース ファイル\Src</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\Scene.h">
+      <Filter>ソース ファイル\Src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Input\Input.h">
+      <Filter>ソース ファイル\Src\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\SceneTitle.h">
+      <Filter>ソース ファイル\Src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Collision\Collision.h">
+      <Filter>ソース ファイル\Src\Collision</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
