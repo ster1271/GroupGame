@@ -129,6 +129,12 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				}//SCENE_ID_FIN_TITLEの終わりの括弧
 				break;
 
+				//------------------------------------------
+				//↓自分の担当のシーンを作るときは
+				//該当箇所のコメント化の解除をお忘れなく
+				//								by 上田
+				//------------------------------------------
+
 				//case SCENE_ID_INIT_PLAY:
 				//{
 				//	//プレイシーン初期化
