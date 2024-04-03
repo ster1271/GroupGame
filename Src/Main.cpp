@@ -4,6 +4,7 @@
 #include "Common.h"
 #include "Scene/Scene.h"
 #include "Scene/SceneTitle.h"
+#include "Scene/SceneClear.h"
 
 // define
 #define	SCREEN_SIZE_X	640	// X方向の画面サイズを指定
@@ -162,32 +163,32 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				//}//SCENE_ID_FIN_PLAYの終わりの括弧
 				//break;
 
-				//case SCENE_ID_INIT_CLEAR:
-				//{
-				//	//クリア画面初期化
-				//	InitClear();
+				case SCENE_ID_INIT_CLEAR:
+				{
+					//クリア画面初期化
+					InitClear();
 
-				//}//SCENE_ID_INIT_CLEARの終わりの括弧
-				//break;
+				}//SCENE_ID_INIT_CLEARの終わりの括弧
+				break;
 
-				//case SCENE_ID_LOOP_CLEAR:
-				//{
-				//	//クリア画面通常処理
-				//	StepClear();
+				case SCENE_ID_LOOP_CLEAR:
+				{
+					//クリア画面通常処理
+					StepClear();
 
-				//	//クリア画面描画処理
-				//	DrawClear();
+					//クリア画面描画処理
+					DrawClear();
 
-				//}//SCENE_ID_LOOP_CLEARの終わりの括弧
-				//break;
+				}//SCENE_ID_LOOP_CLEARの終わりの括弧
+				break;
 
-				//case SCENE_ID_FIN_CLEAR:
-				//{
-				//	//クリア画面後処理
-				//	FinClear();
+				case SCENE_ID_FIN_CLEAR:
+				{
+					//クリア画面後処理
+					FinClear();
 
-				//}//SCENE_ID_FIN_CLEARの終わりの括弧
-				//break;
+				}//SCENE_ID_FIN_CLEARの終わりの括弧
+				break;
 
 				//case SCENE_ID_INIT_GAMEOVER:
 				//{
