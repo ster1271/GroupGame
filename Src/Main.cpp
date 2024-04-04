@@ -126,7 +126,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 				case SCENE_ID_FIN_TITLE:
 				{
-					//タイトル後処理//
+					//タイトル後処理
 					FinTitle();
 
 				}//SCENE_ID_FIN_TITLEの終わりの括弧
