@@ -195,6 +195,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				}//SCENE_ID_FIN_CLEARの終わりの括弧
 				break;
 
+				//ゲームオーバーシーン担当宮近
 				case SCENE_ID_INIT_GAMEOVER:
 				{
 					//ゲームオーバー画面初期化
