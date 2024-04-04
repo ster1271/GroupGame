@@ -4,11 +4,13 @@
 #include "Common.h"
 #include "Scene/Scene.h"
 #include "Scene/SceneTitle.h"
+#include "Scene/ScenePlay.h"
 #include "Scene/SceneClear.h"
+#include "Scene/SceneGameOver.h"
 
 // define
-#define	SCREEN_SIZE_X	640	// X方向の画面サイズを指定
-#define	SCREEN_SIZE_Y	480	// Y方向の画面サイズを指定
+#define	SCREEN_SIZE_X	1280	// X方向の画面サイズを指定
+#define	SCREEN_SIZE_Y	720	// Y方向の画面サイズを指定
 
 //フレームレート情報
 struct FrameRateInfo
@@ -36,7 +38,7 @@ int g_CurrentSceneID = SCENE_ID_INIT_TITLE;
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	//ウィンドウの状態を設定する
-	ChangeWindowMode(true);
+	ChangeWindowMode(false);
 
 	//DXライブラリの初期化
 	if (DxLib_Init() == -1) {
@@ -124,44 +126,38 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 				case SCENE_ID_FIN_TITLE:
 				{
-					//タイトル後処理
+					//タイトル後処理//
 					FinTitle();
 
 				}//SCENE_ID_FIN_TITLEの終わりの括弧
 				break;
 
-				//------------------------------------------
-				//↓自分の担当のシーンを作るときは
-				//該当箇所のコメント化の解除をお忘れなく
-				//								by 上田
-				//------------------------------------------
+				case SCENE_ID_INIT_PLAY:
+				{
+					//プレイシーン初期化
+					InitPlay();
 
-				//case SCENE_ID_INIT_PLAY:
-				//{
-				//	//プレイシーン初期化
-				//	InitPlay();
+				}//SCENE_ID_INIT_PLAYの終わりの括弧
+				break;
 
-				//}//SCENE_ID_INIT_PLAYの終わりの括弧
-				//break;
+				case SCENE_ID_LOOP_PLAY:
+				{
+					//プレイシーン通常処理
+					StepPlay();
 
-				//case SCENE_ID_LOOP_PLAY:
-				//{
-				//	//プレイシーン通常処理
-				//	StepPlay();
+					//プレイシーン描画処理
+					DrawPlay();
 
-				//	//プレイシーン描画処理
-				//	DrawPlay();
+				}//SCENE_ID_LOOP_PLAYの終わりの括弧
+				break;
 
-				//}//SCENE_ID_LOOP_PLAYの終わりの括弧
-				//break;
+				case SCENE_ID_FIN_PLAY:
+				{
+					//プレイシーン後処理
+					FinPlay();
 
-				//case SCENE_ID_FIN_PLAY:
-				//{
-				//	//プレイシーン後処理
-				//	FinPlay();
-
-				//}//SCENE_ID_FIN_PLAYの終わりの括弧
-				//break;
+				}//SCENE_ID_FIN_PLAYの終わりの括弧
+				break;
 
 				//クリアシーン(高松)
 				case SCENE_ID_INIT_CLEAR:
@@ -191,32 +187,32 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 				}//SCENE_ID_FIN_CLEARの終わりの括弧
 				break;
 
-				//case SCENE_ID_INIT_GAMEOVER:
-				//{
-				//	//ゲームオーバー画面初期化
-				//	InitGameOver();
+				case SCENE_ID_INIT_GAMEOVER:
+				{
+					//ゲームオーバー画面初期化
+					InitGameOver();
 
-				//}//SCENE_ID_INIT_GAMEOVERの終わりの括弧
-				//break;
+				}//SCENE_ID_INIT_GAMEOVERの終わりの括弧
+				break;
 
-				//case SCENE_ID_LOOP_GAMEOVER:
-				//{
-				//	//ゲームオーバー画面通常処理
-				//	StepGameOver();
+				case SCENE_ID_LOOP_GAMEOVER:
+				{
+					//ゲームオーバー画面通常処理
+					StepGameOver();
 
-				//	//ゲームオーバー画面描画処理
-				//	DrawGameOver();
+					//ゲームオーバー画面描画処理
+					DrawGameOver();
 
-				//}//SCENE_ID_LOOP_GAMEOVERの終わりの括弧
-				//break;
+				}//SCENE_ID_LOOP_GAMEOVERの終わりの括弧
+				break;
 
-				//case SCENE_ID_FIN_GAMEOVER:
-				//{
-				//	//ゲームオーバー画面後処理
-				//	FinGameOver();
+				case SCENE_ID_FIN_GAMEOVER:
+				{
+					//ゲームオーバー画面後処理
+					FinGameOver();
 
-				//}//SCENE_ID_FIN_GAMEOVERの終わりの括弧
-				//break;
+				}//SCENE_ID_FIN_GAMEOVERの終わりの括弧
+				break;
 
 			}//シーン振り分けのswitch文の終わりの括弧
 
