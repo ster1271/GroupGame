@@ -46,6 +46,7 @@
       <Filter>ソース ファイル\Src\Effect</Filter>
     </ClCompile>
     <ClCompile Include="Src\Scene\ScenePlay.cpp">
+    <ClCompile Include="Src\Scene\SceneGameOver.cpp">
       <Filter>ソース ファイル\Src\Scene</Filter>
     </ClCompile>
   </ItemGroup>
@@ -69,6 +70,7 @@
       <Filter>ソース ファイル\Src\Effect</Filter>
     </ClInclude>
     <ClInclude Include="Src\Scene\ScenePlay.h">
+    <ClInclude Include="Src\Scene\SceneGameOver.h">
       <Filter>ソース ファイル\Src\Scene</Filter>
     </ClInclude>
   </ItemGroup>
