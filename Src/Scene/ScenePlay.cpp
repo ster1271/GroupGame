@@ -36,6 +36,9 @@ void InitPlay()
 	//プレイヤーの初期化
 	player.InitPlayer();
 
+	//道路の初期化および画像の読み込み
+	player.InitRoad();
+
 	//エフェクトの初期化
 	InitEffect();
 
@@ -81,6 +84,9 @@ void StepPlay()
 //プレイシーン描画処理
 void DrawPlay()
 {
+	//道路描画処理
+	player.DrawRoad();
+
 	//プレイヤー描画処理
 	player.DrawPlayer();
 
@@ -97,9 +103,12 @@ void DrawPlay()
 //プレイシーン後処理
 void FinPlay()
 {
+	//道路画像後処理
+	player.FinRoad();
+
 	//プレイヤーの後処理
 	player.FinPlayer();
-
+	
 	//エフェクトの後処理
 	FinEffect();
 
