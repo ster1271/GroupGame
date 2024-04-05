@@ -197,7 +197,7 @@ class Player
 			//“¹˜H—p•Ï”‚Ì‰Šúİ’è
 			Road_PosX = 240.0f;
 			Road_PosY = 0.0f;
-			Road_Speed = 5.0f;
+			Road_Speed = 3.0f;
 			RoadIsMove = true;
 		}
 
