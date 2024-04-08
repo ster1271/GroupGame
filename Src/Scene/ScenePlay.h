@@ -1,17 +1,14 @@
 #pragma once
 
-<<<<<<< Updated upstream
 #define PLAYER_PATH		("Data/PlayImage/runBoy/runBoy1.png")	//プレイヤー画像のパス
 #define ROAD_PATH		("Data/PlayImage/Road/道路.png")		//道路の画像パス
 #define GATE_PATH		("Data/PlayImage/Gate/Gate.png")		//ゲートの画像パス
 
 #define GATE_NUM	(12)		//ゲート最大数
-=======
+
 #define ROAD_PATH	("Data/PlayImage/Road/道路.png")					//道路の画像のパス
 #define BACK_PATH	("Data/PlayImage/BackGround/PlayBackGround.png")	//背景の画像のパス
 #define BGM_PATH	("Data/Sounds/Music/Play/Stage.mp3")				//BGMのパス
->>>>>>> Stashed changes
-
 
 //背景クラス
 class BackGround

@@ -12,6 +12,9 @@ int Bg_SterHndl[3] = { 0 };
 //星の本体
 int Score_SterHndl[3] = { 0 };
 
+//BGMのハンドル
+int Clear_Bgm;
+
 //クリア初期化
 void InitClear()
 {
@@ -32,6 +35,12 @@ void InitClear()
 		Score_SterHndl[i] = LoadGraph(STER_PATH);
 	}
 
+	//BGM読み込み
+	Clear_Bgm = LoadSoundMem(CLEAR_BGM_PATH);
+
+	//BGM再生
+	PlaySoundMem(Clear_Bgm, DX_PLAYTYPE_LOOP, true);
+
 	//クリア通常処理に移動
 	g_CurrentSceneID = SCENE_ID_LOOP_CLEAR;
 }
@@ -39,8 +48,6 @@ void InitClear()
 //クリア通常処理
 void StepClear()
 {
-
-
 	//エンターキーでクリア後処理に移動
 	if (IsKeyPush(KEY_INPUT_RETURN))
 	{
@@ -80,8 +87,18 @@ void FinClear()
 	//背景
 	DeleteGraph(clear_buckGround_image_handle);
 
+<<<<<<< Updated upstream
 	DeleteGraph(Select_Hundle);
 
 	//タイトルシーンに移動
+=======
+	//BGM停止
+	StopSoundMem(Clear_Bgm);
+
+	//BGM破棄
+	DeleteSoundMem(Clear_Bgm);
+
+	//タイトルに戻るようにする
+>>>>>>> Stashed changes
 	g_CurrentSceneID = SCENE_ID_INIT_TITLE;
 }
