@@ -1,77 +1,117 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ソース ファイル">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{8b5acead-e150-4ed1-b6ad-eb53ee19c16b}</UniqueIdentifier>
     </Filter>
     <Filter Include="ヘッダー ファイル">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+      <UniqueIdentifier>{0de5d466-ba35-41f9-a205-ee06d5992def}</UniqueIdentifier>
     </Filter>
-    <Filter Include="リソース ファイル">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{6af80901-4d1f-4c91-88e8-27bee6bbe931}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Src">
-      <UniqueIdentifier>{91b2e56f-dd2d-4207-8071-464779d9f6de}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Collision">
+      <UniqueIdentifier>{a411c57e-7257-462c-883e-e1d0428c8e39}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Src\Scene">
-      <UniqueIdentifier>{d4c0b684-c329-438f-9e90-104cc328b3d9}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Effect">
+      <UniqueIdentifier>{db15b906-976c-48eb-af85-575dc73b0b2b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Src\Input">
-      <UniqueIdentifier>{d4c36496-fdb3-4eb9-8f65-922d91e749a7}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Input">
+      <UniqueIdentifier>{dbfecc44-a96a-4aad-a40c-dce234e2ace0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Src\Collision">
-      <UniqueIdentifier>{c8fa48fc-8192-4cf8-bf4f-37ac79c15e58}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Scene">
+      <UniqueIdentifier>{f4660c40-513a-47e2-89ca-655f5b0b1a2a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ソース ファイル\Src\Effect">
-      <UniqueIdentifier>{a90418e6-7fc1-4c97-8ac6-eaae1811b8ef}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\Player">
+      <UniqueIdentifier>{990e183e-28d4-404a-97c0-f78bb64c8fe0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Gate">
+      <UniqueIdentifier>{76d950c0-25d8-4f67-8861-27785a86cb8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Enemy">
+      <UniqueIdentifier>{8ef67d47-32f9-4383-905b-d3cfde61416f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\Score">
+      <UniqueIdentifier>{bea7e086-a953-4682-893c-05b5010a6771}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Src\Main.cpp">
-      <Filter>ソース ファイル\Src</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Input\Input.cpp">
-      <Filter>ソース ファイル\Src\Input</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Scene\SceneTitle.cpp">
-      <Filter>ソース ファイル\Src\Scene</Filter>
+      <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="Src\Collision\Collision.cpp">
-      <Filter>ソース ファイル\Src\Collision</Filter>
+      <Filter>ソース ファイル\Collision</Filter>
     </ClCompile>
     <ClCompile Include="Src\Effect\Effect.cpp">
-      <Filter>ソース ファイル\Src\Effect</Filter>
+      <Filter>ソース ファイル\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Input\Input.cpp">
+      <Filter>ソース ファイル\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\SceneClear.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\SceneGameOver.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
     </ClCompile>
     <ClCompile Include="Src\Scene\ScenePlay.cpp">
-    <ClCompile Include="Src\Scene\SceneGameOver.cpp">
-      <Filter>ソース ファイル\Src\Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Scene\SceneTitle.cpp">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Player\Player.cpp">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Gate\Gate.cpp">
+      <Filter>ソース ファイル\Gate</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Enemy\Enemy.cpp">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Score\Score.cpp">
+      <Filter>ソース ファイル\Score</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Src\Common.h">
-      <Filter>ソース ファイル\Src</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Scene\Scene.h">
-      <Filter>ソース ファイル\Src\Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Input\Input.h">
-      <Filter>ソース ファイル\Src\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Scene\SceneTitle.h">
-      <Filter>ソース ファイル\Src\Scene</Filter>
+      <Filter>ソース ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Src\Collision\Collision.h">
-      <Filter>ソース ファイル\Src\Collision</Filter>
+      <Filter>ソース ファイル\Collision</Filter>
     </ClInclude>
     <ClInclude Include="Src\Effect\Effect.h">
-      <Filter>ソース ファイル\Src\Effect</Filter>
+      <Filter>ソース ファイル\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Input\Input.h">
+      <Filter>ソース ファイル\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\Scene.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\SceneClear.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\SceneGameOver.h">
+      <Filter>ソース ファイル\Scene</Filter>
     </ClInclude>
     <ClInclude Include="Src\Scene\ScenePlay.h">
-    <ClInclude Include="Src\Scene\SceneGameOver.h">
-      <Filter>ソース ファイル\Src\Scene</Filter>
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Scene\SceneTitle.h">
+      <Filter>ソース ファイル\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Player\Player.h">
+      <Filter>ソース ファイル\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Gate\Gate.h">
+      <Filter>ソース ファイル\Gate</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Enemy\Enemy.h">
+      <Filter>ソース ファイル\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Score\Score.h">
+      <Filter>ソース ファイル\Score</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

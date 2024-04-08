@@ -1,60 +1,60 @@
 #pragma once
 
+<<<<<<< Updated upstream
 #define PLAYER_PATH		("Data/PlayImage/runBoy/runBoy1.png")	//プレイヤー画像のパス
 #define ROAD_PATH		("Data/PlayImage/Road/道路.png")		//道路の画像パス
 #define GATE_PATH		("Data/PlayImage/Gate/Gate.png")		//ゲートの画像パス
 
 #define GATE_NUM	(12)		//ゲート最大数
+=======
+#define ROAD_PATH	("Data/PlayImage/Road/道路.png")					//道路の画像のパス
+#define BACK_PATH	("Data/PlayImage/BackGround/PlayBackGround.png")	//背景の画像のパス
+#define BGM_PATH	("Data/Sounds/Music/Play/Stage.mp3")				//BGMのパス
+>>>>>>> Stashed changes
 
 
-//プレイヤー画像の種類
-enum PLAYER_IMAGE
+//背景クラス
+class BackGround
 {
-	PLAYER_1 = 0,	//runBoy1
-	PLAYER_2,		//runBoy2
-	PLAYER_3,		//runBoy3
-	PLAYER_4,		//runBoy4
-	PLAYER_5,		//runBoy5
-	PLAYER_6,		//runBoy6
-	PLAYER_7,		//runBoy7
-	PLAYER_8,		//runBoy8
-	PLAYER_9,		//runBoy9
-	PLAYER_10,		//runBoy10
+	private:
+		int BgHandle;			//背景の画像ハンドル
+		float BgPosX, BgPosY;	//X座標,y座標
 
-	PLAYER_NUM,
+	public:
+		BackGround()	//コンストラクタ
+		{
+			BgHandle = 0;
+			BgPosX = 0.0f;
+			BgPosY = 0.0f;
+		}
+
+		void InitBackGround()	//背景の初期化
+		{
+			BgHandle = LoadGraph(BACK_PATH);
+			BgPosX = 0.0f;
+			BgPosY = 0.0f;
+		}
+
+		void DarwBakcGround()	//背景の描画処理
+		{
+			DrawGraph((int)BgPosX, (int)BgPosY, BgHandle, true);
+		}
+
+		void FinBackGround()	//背景の後処理
+		{
+			DeleteGraph(BgHandle);
+		}
 };
 
-//プレイヤー画像のパス
-const char PlayerImage_Path[PLAYER_NUM][100] =
+//道路クラス
+class Road
 {
-	"Data/PlayImage/runBoy/runBoy1.png",	//runBoy1
-	"Data/PlayImage/runBoy/runBoy2.png",	//runBoy2
-	"Data/PlayImage/runBoy/runBoy3.png",	//runBoy3
-	"Data/PlayImage/runBoy/runBoy4.png",	//runBoy4
-	"Data/PlayImage/runBoy/runBoy5.png",	//runBoy5
-	"Data/PlayImage/runBoy/runBoy6.png",	//runBoy6
-	"Data/PlayImage/runBoy/runBoy7.png",	//runBoy7
-	"Data/PlayImage/runBoy/runBoy8.png",	//runBoy8
-	"Data/PlayImage/runBoy/runBoy9.png",	//runBoy9
-	"Data/PlayImage/runBoy/runBoy10.png",	//runBoy10
-};
-
-//プレイヤークラス
-class Player
-{
-	private:	//メンバ変数一覧
-		int PlayerHandle[PLAYER_NUM];	//画像ハンドル
-		int HandleIndex;				//画像ハンドルの添え字用変数
-		int AnimeFrame;					//画像の再生時間
-		bool isReverse;					//アニメーションの逆再生フラグ
-		float PosX, PosY;				//X座標,Y座標
-		float MoveSpeed;				//移動速度
-
-		//道路画像用変数
+	private:
 		int Road_Handle[2];				//道路の画像ハンドル
 		float Road_PosX, Road_PosY;		//X座標,Y座標
 		float Road_Speed;				//自動スクロールの速度
 		bool RoadIsMove;				//今道路の画像が自動スクロールしているかフラグ
+<<<<<<< Updated upstream
 
 
 	public:		//メソッド一覧
@@ -182,7 +182,10 @@ class Player
 				}
 			}
 		}
+=======
+>>>>>>> Stashed changes
 
+	public:
 		void InitRoad()			//道路用初期化
 		{
 			//初期化
@@ -208,7 +211,15 @@ class Player
 		{
 			for (int i = 0; i < 2; i++)
 			{
-				DrawGraph(Road_PosX, Road_PosY - i * 720, Road_Handle[i], true);
+				DrawGraph((int)Road_PosX, (int)Road_PosY - i * 720, Road_Handle[i], true);
+			}
+		}
+
+		void FinRoad()		//道路画像破棄
+		{
+			for (int i = 0; i < 2; i++)
+			{
+				DeleteGraph(Road_Handle[i]);
 			}
 		}
 
@@ -222,15 +233,6 @@ class Player
 				{
 					Road_PosY = 0;
 				}
-			}
-
-		}
-
-		void FinRoad()		//道路画像破棄
-		{
-			for (int i = 0; i < 2; i++)
-			{
-				DeleteGraph(Road_Handle[i]);
 			}
 		}
 

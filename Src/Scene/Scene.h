@@ -1,5 +1,6 @@
 #pragma once
 #include "../Input/Input.h"
+#include "../Collision/Collision.h"
 
 //タイトル関連
 #define SCENE_ID_INIT_TITLE		(100)	//初期化
