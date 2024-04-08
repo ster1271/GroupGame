@@ -4,6 +4,8 @@
 //”wŒi
 #define CLEAR_BUCKGROUND_PATH	"Data/ClearImage/Game Clear.png"
 #define SELECT_PATH				"Data/ClearImage/Select.png"
+#define BG_STER_PATH			"Data/ClearImage/Score_Ster.png"
+#define STER_PATH				"Data/ClearImage/Score_ColorSter.png"
 
 //ƒNƒŠƒA‰Šú‰»
 void InitClear();
