@@ -58,7 +58,7 @@ void DrawGameOver()
 	DrawGraph(0, 0, BgGameOverHundle, true);
 
 	//ゲームオーバー文字画像描画
-	DrawGraph(0, 0, GameOverHundle, true);
+	DrawGraph(80, 0, GameOverHundle, true);
 
 	//コンティニュー文字画像描画
 	DrawGraph(300, 300, ContinueHundle, true);
