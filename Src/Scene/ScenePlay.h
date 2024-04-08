@@ -1,7 +1,8 @@
 #pragma once
 
 #define PLAYER_PATH		("Data/PlayImage/runBoy/runBoy1.png")	//プレイヤー画像のパス
-#define ROAD_PATH		("Data/PlayImage/Road/道路.png")		//道路の画像
+#define ROAD_PATH		("Data/PlayImage/Road/道路.png")		//道路の画像パス
+#define GATE_PATH		("Data/PlayImage/Gate/Gate.png")		//ゲートの画像パス
 
 
 //プレイヤー画像の種類
@@ -51,7 +52,8 @@ class Player
 		int Road_Handle[2];				//道路の画像ハンドル
 		float Road_PosX, Road_PosY;		//X座標,Y座標
 		float Road_Speed;				//自動スクロールの速度
-		bool RoadIsMove;					//今道路の画像が自動スクロールしているかフラグ
+		bool RoadIsMove;				//今道路の画像が自動スクロールしているかフラグ
+
 
 	public:		//メソッド一覧
 		Player()	//コンストラクタ(全ての情報をリセット)
@@ -66,7 +68,6 @@ class Player
 			PosX = 0.0f;
 			PosY = 0.0f;
 			MoveSpeed = 0.0f;
-
 		}
 
 		void InitPlayer()	//プレイヤーの初期化
