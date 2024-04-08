@@ -4,8 +4,6 @@
 #define ROAD_PATH		("Data/PlayImage/Road/道路.png")		//道路の画像パス
 #define GATE_PATH		("Data/PlayImage/Gate/Gate.png")		//ゲートの画像パス
 
-#define GATE_NUM	(12)		//ゲート最大数
-
 
 //プレイヤー画像の種類
 enum PLAYER_IMAGE
