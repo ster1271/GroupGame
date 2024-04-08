@@ -121,10 +121,10 @@ class Player
 				PosX += MoveSpeed;
 
 				//画面端まで到達したら
-				if (PosX >= 1248.0f)
+				if (PosX >= 875.0f)
 				{
 					//それ以上右に行けないようにする
-					PosX = 1248.0f;
+					PosX = 875.0f;
 				}
 			}
 
@@ -135,10 +135,10 @@ class Player
 				PosX -= MoveSpeed;
 
 				//画面端まで到達したら
-				if (PosX <= 32.0f)
+				if (PosX <= 405.0f)
 				{
 					//それ以上左に行けないようにする
-					PosX = 32.0f;
+					PosX = 405.0f;
 				}
 			}
 		}
