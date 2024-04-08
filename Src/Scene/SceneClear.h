@@ -2,7 +2,8 @@
 
 //画像パス
 //背景
-#define CLEAR_BUCKGROUND_PATH	"Data/ClearImage/GameClear_BuckGround.png"
+#define CLEAR_BUCKGROUND_PATH	"Data/ClearImage/Game Clear.png"
+#define SELECT_PATH				"Data/ClearImage/Select.png"
 
 //クリア初期化
 void InitClear();
