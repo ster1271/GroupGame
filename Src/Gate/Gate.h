@@ -2,10 +2,10 @@
 
 #define GATE_NUM	(6)	//くぐるゲートの数
 #define TEMP_NUM	(4)	//テンプレの数
-#define GATE1_PATH		("Data/PlayImage/Gate/Gate1_1_1.png")	//プラスゲートの画像のパス
-#define GATE2_PATH		("Data/PlayImage/Gate/Gate1_1_2.png")	//マイナスゲートの画像のパス
-#define PLUS_SOUND		("Data/Sounds/SE/Play/Plus.wav")		//プラス効果音のパス
-#define MINUS_SOUND		("Data/Sounds/SE/Play/Minus.wav")		//マイナス効果音のパス
+#define GATE1_PATH		("Data/PlayImage/Gate/Gate.png")	//プラスゲートの画像のパス
+#define GATE2_PATH		("Data/PlayImage/Gate/Gate.png")	//マイナスゲートの画像のパス
+#define PLUS_SOUND		("Data/Sounds/SE/Play/Plus.wav")	//プラス効果音のパス
+#define MINUS_SOUND		("Data/Sounds/SE/Play/Minus.wav")	//マイナス効果音のパス
 
 //ゲート情報構造体
 struct GateInfo

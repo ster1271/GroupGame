@@ -24,6 +24,8 @@ bool isGameOver;
 //BGM格納ハンドル
 int BgmHandle = 0;
 
+int Template = 0;
+
 //プレイシーン初期化
 void InitPlay()
 {
@@ -39,8 +41,16 @@ void InitPlay()
 	//道路の初期化および画像の読み込み
 	road.InitRoad();
 
+	Template = GetRand(TEMP_NUM);
+
+	//ゲートのテンプレ読み込み
+	LoadGate(Template);
+
 	//ゲートの初期化
 	InitGate();
+
+	//体力設定
+	SetLife(Template);
 
 	//敵の初期化
 	InitEnemy();

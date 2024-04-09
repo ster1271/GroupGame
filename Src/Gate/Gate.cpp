@@ -13,9 +13,6 @@ int SoundEffect[2] = { 0 };
 
 void InitGate()		//ゲートの初期化
 {
-	//ゲートのテンプレ読み込み
-	LoadGate(GetRand(TEMP_NUM));
-
 	//ゲート情報を先頭から回す
 	for (int i = 0; i < GATE_NUM; i++)
 	{
@@ -33,8 +30,8 @@ void InitGate()		//ゲートの初期化
 				//赤のゲート
 				gateInfo[i][j].GateHandle = LoadGraph(GATE2_PATH);
 			}
-			gateInfo[i][0].GatePosX = 372.0f;
-			gateInfo[i][1].GatePosX = 642.0f;
+			gateInfo[i][0].GatePosX = 357.0f;
+			gateInfo[i][1].GatePosX = 627.0f;
 			gateInfo[i][j].GatePosY = -600.0f;
 			gateInfo[i][j].Radius = 64.0f;
 			gateInfo[i][j].isDraw = true;
@@ -132,7 +129,7 @@ void DrawGate()		//ゲート描画処理
 		if (gateInfo[CurrentGate][j].isDraw)
 		{
 			DrawGraph((int)gateInfo[CurrentGate][j].GatePosX, (int)gateInfo[CurrentGate][j].GatePosY, gateInfo[CurrentGate][j].GateHandle, true);
-			DrawFormatString((int)gateInfo[CurrentGate][j].GatePosX + 135, (int)gateInfo[CurrentGate][j].GatePosY + 64, GetColor(0, 0, 0), "%d", gateInfo[CurrentGate][j].Score);
+			DrawFormatString((int)gateInfo[CurrentGate][j].GatePosX + 135, (int)gateInfo[CurrentGate][j].GatePosY + 64, GetColor(255, 255, 255), "%d", gateInfo[CurrentGate][j].Score);
 		}
 	}	
 }

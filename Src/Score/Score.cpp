@@ -26,6 +26,7 @@ void InitRank()		//ランクの初期化
 			rankInfo[i][j].PosX = 400.0f;
 			rankInfo[i][j].PosY = 480.0f;
 			rankInfo[i][j].isDraw = false;
+			rankInfo[i][j].Result = 0;
 		}
 	}
 
@@ -46,6 +47,13 @@ void StepRank()		//ランク通常処理
 
 	Result = playerInfo->CurrentScore + Bonus;
 
+	for (int i = 0; i < STAR_NUM; i++)
+	{
+		for (int j = 0; j < 2; j++)
+		{
+			rankInfo[i][j].Result = Result;
+		}
+	}
 	//ランク表示フラグがtrueなら
 	if (playerInfo->isRank)
 	{

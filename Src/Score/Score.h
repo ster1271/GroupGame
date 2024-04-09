@@ -12,6 +12,7 @@ struct RankInfo
 	int StarHandle;		//画像ハンドル
 	float PosX, PosY;	//X座標,Y座標
 	bool isDraw;		//描画フラグ
+	int Result;			//合計スコア
 };
 
 void InitRank();	//ランクの初期化

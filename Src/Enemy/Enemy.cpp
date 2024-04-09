@@ -22,9 +22,6 @@ int EnemySound = 0;
 
 void InitEnemy()	//“G‚Ì‰Šú‰»
 {
-	//‘Ì—Íİ’è
-	SetLife(GetRand(TEMP_NUM));
-
 	for (int i = 0; i < 3; i++)
 	{
 		enemyInfo[i].Enemyhandle = LoadGraph(ENEMY_PATH);
