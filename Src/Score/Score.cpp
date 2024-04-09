@@ -47,6 +47,8 @@ void StepRank()		//ƒ‰ƒ“ƒN’Êíˆ—
 
 	Result = playerInfo->CurrentScore + Bonus;
 
+	playerInfo->Result = Result;
+
 	for (int i = 0; i < STAR_NUM; i++)
 	{
 		for (int j = 0; j < 2; j++)
@@ -111,7 +113,6 @@ void DrawRank()		//ƒ‰ƒ“ƒN•`‰æˆ—
 				DrawFormatString(550, 150, GetColor(0, 0, 0), "Score  :%d", playerInfo->CurrentScore);
 				DrawFormatString(550, 180, GetColor(0, 0, 0), "Bonus  :%d * 10 = %d", playerInfo->Life, Bonus);
 				DrawFormatString(550, 210, GetColor(0, 0, 0), "Result :%d + %d = %d", playerInfo->CurrentScore, Bonus, Result);
-				DrawRotaGraph((int)rankInfo[i][j].PosX + i * 250, (int)rankInfo[i][j].PosY, 1.0f, 0.0f, rankInfo[i][j].StarHandle, true);
 				DrawFormatString(575, 300, GetColor(0, 0, 0), "Press Enter Key");
 			}
 		}

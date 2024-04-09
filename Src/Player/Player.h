@@ -49,6 +49,7 @@ struct PlayerInfo
 	int BreakEnemy;					//倒した敵の数
 	bool isRank;					//ランク表示に進むフラグ
 	bool isClear;					//クリアフラグ
+	int Result;						//合計スコア
 };
 
 void InitPlayer();	//プレイヤーの初期化

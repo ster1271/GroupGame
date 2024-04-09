@@ -1,6 +1,7 @@
 #include "DxLib.h"
 #include "SceneClear.h"
 #include "Scene.h"
+#include "../Player/Player.h"
 
 //タイトルハンドル
 int clear_buckGround_image_handle;
@@ -21,19 +22,19 @@ void InitClear()
 	//画像読み込み
 	//背景
 	clear_buckGround_image_handle = LoadGraph(CLEAR_BUCKGROUND_PATH);
-	//Select_Hundle = LoadGraph(SELECT_PATH);
+	Select_Hundle = LoadGraph(SELECT_PATH);
 
-	////星の背景
-	//for (int i = 0; i < 3; i++)
-	//{
-	//	Bg_SterHndl[i] = LoadGraph(BG_STER_PATH);
-	//}
+	//星の背景
+	for (int i = 0; i < 3; i++)
+	{
+		Bg_SterHndl[i] = LoadGraph(BG_STER_PATH);
+	}
 
-	////星の本体
-	//for (int i = 0; i < 3; i++)
-	//{
-	//	Score_SterHndl[i] = LoadGraph(STER_PATH);
-	//}
+	//星の本体
+	for (int i = 0; i < 3; i++)
+	{
+		Score_SterHndl[i] = LoadGraph(STER_PATH);
+	}
 
 	//BGM読み込み
 	Clear_Bgm = LoadSoundMem(CLEAR_BGM_PATH);
@@ -62,22 +63,27 @@ void DrawClear()
 	//背景
 	DrawGraph(0, 0, clear_buckGround_image_handle, true);
 
-	//DrawRotaGraph(330, 600, 2.0f, 0.0f, Select_Hundle, true, false, false);
+	DrawRotaGraph(330, 600, 2.0f, 0.0f, Select_Hundle, true, false, false);
 
-	//for (int i = 0; i < 3; i++)
-	//{
-	//	//灰色の星
-	//	DrawGraph(220 * i + 360, 220, Bg_SterHndl[i], true);
+	//プレイヤー情報取得
+	PlayerInfo* playerInfo = GetPlayerInfo();
 
-	//	
-	//}
+	DrawFormatString(550, 450, GetColor(255, 255, 255), "%d", playerInfo->Result);
 
-	////上限'3'を変数に変更する
-	//for (int a = 0; a < 3; a++)
-	//{
-	//	//色付きの星
-	//	DrawGraph(220 * a + 360, 220, Score_SterHndl[a], true);
-	//}
+	for (int i = 0; i < 3; i++)
+	{
+		//灰色の星
+		DrawGraph(220 * i + 360, 220, Bg_SterHndl[i], true);
+
+		
+	}
+
+	//上限'3'を変数に変更する
+	for (int a = 0; a < 3; a++)
+	{
+		//色付きの星
+		DrawGraph(220 * a + 360, 220, Score_SterHndl[a], true);
+	}
 }
 
 //クリア後処理

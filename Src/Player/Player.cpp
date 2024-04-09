@@ -30,6 +30,7 @@ void InitPlayer()	//プレイヤーの初期化
 	playerInfo.BreakEnemy = 0;			//倒した敵の数をリセット
 	playerInfo.isRank = false;			//ランク表示はしない
 	playerInfo.isClear = false;			//クリアフラグを折る
+	playerInfo.Result = 0;
 }
 
 void StepPlayer()	//プレイヤー通常処理
